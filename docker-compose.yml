@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: huge_web
+    ports:
+      - "8080:80"
+    restart: always
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: huge_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+      - ./public:/var/www/html
+      - ./application:/var/www/application
+      - ./vendor:/var/www/vendor
+
+  db:
+    image: mysql:8.0
+    container_name: huge_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: huge
+      MYSQL_USER: huge_user
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3307:3307"
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "8081:80"
+
+ 
