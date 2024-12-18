@@ -13,6 +13,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        Auth::checkAdminAuthentication();
         parent::__construct();
     }
 

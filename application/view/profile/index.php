@@ -19,7 +19,7 @@
                     <td>Username</td>
                     <td>User's email</td>
                     <td>Activated ?</td>
-                    <td>Link to user's profile</td>
+                    <td>Link to chat with user</td>
                 </tr>
                 </thead>
                 <?php foreach ($this->users as $user) { ?>
@@ -34,7 +34,7 @@
                         <td><?= $user->user_email; ?></td>
                         <td><?= ($user->user_active == 0 ? 'No' : 'Yes'); ?></td>
                         <td>
-                            <a href="<?= Config::get('URL') . 'profile/showProfile/' . $user->user_id; ?>">Profile</a>
+                            <a href="<?= Config::get('URL') . 'message/index/' . $user->user_id; ?>">Start Konversation</a>
                         </td>
                     </tr>
                 <?php } ?>
