@@ -9,7 +9,7 @@
 
 # Umsetzung
 
-Das Projekt basiert auf dem Huge Framework und hat aktuell eine Datenbank Anbindung und eine Anmelde und Register-Oberfläche. Es gibt eine Seite, auf der die Benutzer in der Datenbank aufgelistet werden und eine Seite, bei der Notes erstellt und angezeigt werden können.<br>
+Das Projekt basiert auf dem Huge Framework und hat aktuell eine Datenbank Anbindung und eine Anmelde und Register-Oberfläche. Es gibt eine Seite, auf der die Benutzer in der Datenbank aufgelistet werden und eine Seite, bei der Notes erstellt und angezeigt werden können. Hier gibt es ebenso eine Message funktion, bei der man mit anderen Nutzern, Nachrichten hin und her schicken kann. Diese werden in der Datenbank gespeichert.<br>
 
 ## Anpassungen
 Die Captcha Verifizierung wurde entfernt und das Register Feld angepasst
